@@ -2,7 +2,7 @@ import TextBox from "../components/TextBox";
 import ResultBox from "../components/ResultBox";
 import LoadLFortran from "../components/LoadLFortran";
 import preinstalled_programs from "../utils/preinstalled_programs";
-import MyLayout from "../components/MyLayout";
+import TalkLayout from "../components/TalkLayout";
 
 import { useIsMobile } from "../components/useIsMobile";
 
@@ -50,7 +50,7 @@ function Home() {
     const [dataFetch, setDataFetch] = useState(false);
     const isMobile = useIsMobile();
 
-    const myHeight = ((!isMobile) ? "calc(100vh - 170px)" : "calc(50vh - 85px)");
+    const myHeight = ((!isMobile) ? "calc(100vh - 82px)" : "calc(50vh - 85px)");
 
     useEffect(() => {
         fetchData();
@@ -202,5 +202,5 @@ function Home() {
 }
 
 export default function Index() {
-    return <MyLayout><Home /></MyLayout>;
+    return <TalkLayout><Home /></TalkLayout>;
 };
